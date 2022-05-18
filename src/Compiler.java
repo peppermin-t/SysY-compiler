@@ -8,10 +8,10 @@ public class Compiler {
         
         Lexer lexer = new Lexer();
         lexer.dispose(source);
-        // lexer.printTokenList();
+        lexer.printTokenList();
         Parser parser = new Parser(lexer.getWordList());
         parser.dispose();
-        // parser.printOutput();
+        parser.printOutput();
         MCodeGenerator generator1 = new MCodeGenerator(lexer.getWordList());
         generator1.generate();
         generator1.printMCode();
@@ -21,7 +21,7 @@ public class Compiler {
     }
     
     private static String readSource() throws IOException {
-        FileReader fr = new FileReader("testfile.txt");
+        FileReader fr = new FileReader("testfiles/testfile.txt");
         BufferedReader bf = new BufferedReader(fr);
         StringBuilder source = new StringBuilder();
         

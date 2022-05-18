@@ -31,7 +31,7 @@ public class Parser {
         
         blockStack = new LinkedList<>();
         try {
-            bw = new BufferedWriter(new FileWriter("error.txt"));
+            bw = new BufferedWriter(new FileWriter("out_files/out_error.txt"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -911,13 +911,13 @@ public class Parser {
     }
     
     public void printOutput() throws IOException {
-        FileWriter fw = new FileWriter("out_1.txt");
+        FileWriter fw = new FileWriter("out_files/out_parser.txt");
         BufferedWriter bw = new BufferedWriter(fw);
         for (String s : parserOutput) {
             if (debug) {
                 System.out.println(s);
             } else {
-                bw.write(s);
+                bw.write(s + "\n");
             }
         }
         bw.flush();

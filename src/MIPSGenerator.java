@@ -13,7 +13,7 @@ public class MIPSGenerator {
     
     public MIPSGenerator(MBlock root) {
         try {
-            bw = new BufferedWriter(new FileWriter("mips.txt"));
+            bw = new BufferedWriter(new FileWriter("out_files/mips.txt"));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -195,7 +195,7 @@ public class Lexer {
     }
     
     public void printTokenList() throws IOException {
-        FileWriter fw = new FileWriter("out_1.txt");
+        FileWriter fw = new FileWriter("out_files/out_lexer.txt");
         BufferedWriter bw = new BufferedWriter(fw);
         for (WordInfo wordInfo : wordList) {
             bw.write(wordInfo.getType().toString() + " " + wordInfo.getToken() + "\n");
