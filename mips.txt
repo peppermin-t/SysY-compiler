@@ -1,0 +1,323 @@
+.data
+	d: .space 4
+	label_0: .asciiz ", "
+	label_1: .asciiz ", "
+	label_2: .asciiz "\n"
+.text
+	li $fp 0x10040000
+	li $t0 4
+	la $t9 d
+	sw $t0 0($t9)
+	sw $sp 0($fp)
+	subu $sp $sp 68
+	addu $fp $fp 4
+	jal main
+hhh:
+	lw $t9 -4($fp)
+	sw $ra 0($t9)
+	subu $sp $sp 4
+	lw $t9 -4($fp)
+	lw $t0 -68($t9)
+	lw $t9 -4($fp)
+	lw $t1 -68($t9)
+	mul $t2 $t0 $t1
+	move $t3 $t2
+	lw $t9 -4($fp)
+	sw $t3 -72($t9)
+	lw $t9 -4($fp)
+	lw $t4 -68($t9)
+	seq $t5 $t4 1
+	beq $t5 0 jumpLabel_1
+	beq $t5 0 jumpLabel_1
+jumpLabel_0:
+	li $v0 1
+	lw $t9 -4($fp)
+	lw $ra 0($t9)
+	lw $t0 -4($t9)
+	lw $s0 -8($t9)
+	lw $t1 -12($t9)
+	lw $s1 -16($t9)
+	lw $t2 -20($t9)
+	lw $s2 -24($t9)
+	lw $t3 -28($t9)
+	lw $s3 -32($t9)
+	lw $t4 -36($t9)
+	lw $s4 -40($t9)
+	lw $t5 -44($t9)
+	lw $s5 -48($t9)
+	lw $t6 -52($t9)
+	lw $s6 -56($t9)
+	lw $t7 -60($t9)
+	lw $s7 -64($t9)
+	subu $fp $fp 4
+	lw $sp 0($fp)
+	jr $ra
+jumpLabel_1:
+	lw $t9 -4($fp)
+	lw $t6 -68($t9)
+	seq $t7 $t6 2
+	beq $t7 0 jumpLabel_3
+	beq $t7 0 jumpLabel_3
+jumpLabel_2:
+	li $v0 2
+	lw $t9 -4($fp)
+	lw $ra 0($t9)
+	lw $t0 -4($t9)
+	lw $s0 -8($t9)
+	lw $t1 -12($t9)
+	lw $s1 -16($t9)
+	lw $t2 -20($t9)
+	lw $s2 -24($t9)
+	lw $t3 -28($t9)
+	lw $s3 -32($t9)
+	lw $t4 -36($t9)
+	lw $s4 -40($t9)
+	lw $t5 -44($t9)
+	lw $s5 -48($t9)
+	lw $t6 -52($t9)
+	lw $s6 -56($t9)
+	lw $t7 -60($t9)
+	lw $s7 -64($t9)
+	subu $fp $fp 4
+	lw $sp 0($fp)
+	jr $ra
+jumpLabel_3:
+	lw $t9 -4($fp)
+	lw $s0 -72($t9)
+	lw $t9 -4($fp)
+	lw $s1 -72($t9)
+	mul $s2 $s0 $s1
+li $t8 10
+	div $s2 $t8
+	mfhi $s3
+	move $s4 $s3
+	lw $t9 -4($fp)
+	sw $s4 -72($t9)
+	lw $t9 -4($fp)
+	lw $s5 -68($t9)
+	subu $s6 $s5 1
+	sw $sp 0($fp)
+	subu $sp $sp 68
+	sw $s6 0($sp)
+	subu $sp $sp 4
+	addu $fp $fp 4
+	lw $t9 -4($fp)
+	sw $t0 -4($t9)
+	sw $s0 -8($t9)
+	sw $t1 -12($t9)
+	sw $s1 -16($t9)
+	sw $t2 -20($t9)
+	sw $s2 -24($t9)
+	sw $t3 -28($t9)
+	sw $s3 -32($t9)
+	sw $t4 -36($t9)
+	sw $s4 -40($t9)
+	sw $t5 -44($t9)
+	sw $s5 -48($t9)
+	sw $t6 -52($t9)
+	sw $s6 -56($t9)
+	sw $t7 -60($t9)
+	sw $s7 -64($t9)
+	jal hhh
+	move $s7 $v0
+	lw $t9 -4($fp)
+	lw $t0 -68($t9)
+	subu $t1 $t0 2
+	sw $sp 0($fp)
+	subu $sp $sp 68
+	sw $t1 0($sp)
+	subu $sp $sp 4
+	addu $fp $fp 4
+	lw $t9 -4($fp)
+	sw $t0 -4($t9)
+	sw $s0 -8($t9)
+	sw $t1 -12($t9)
+	sw $s1 -16($t9)
+	sw $t2 -20($t9)
+	sw $s2 -24($t9)
+	sw $t3 -28($t9)
+	sw $s3 -32($t9)
+	sw $t4 -36($t9)
+	sw $s4 -40($t9)
+	sw $t5 -44($t9)
+	sw $s5 -48($t9)
+	sw $t6 -52($t9)
+	sw $s6 -56($t9)
+	sw $t7 -60($t9)
+	sw $s7 -64($t9)
+	jal hhh
+	move $t2 $v0
+	addu $t3 $s7 $t2
+	move $v0 $t3
+	lw $t9 -4($fp)
+	lw $ra 0($t9)
+	lw $t0 -4($t9)
+	lw $s0 -8($t9)
+	lw $t1 -12($t9)
+	lw $s1 -16($t9)
+	lw $t2 -20($t9)
+	lw $s2 -24($t9)
+	lw $t3 -28($t9)
+	lw $s3 -32($t9)
+	lw $t4 -36($t9)
+	lw $s4 -40($t9)
+	lw $t5 -44($t9)
+	lw $s5 -48($t9)
+	lw $t6 -52($t9)
+	lw $s6 -56($t9)
+	lw $t7 -60($t9)
+	lw $s7 -64($t9)
+	subu $fp $fp 4
+	lw $sp 0($fp)
+	jr $ra
+main:
+	subu $sp $sp 4
+	li $t0 2
+	lw $t9 -4($fp)
+	sw $t0 -68($t9)
+	subu $sp $sp 4
+	li $t1 5
+	lw $t9 -4($fp)
+	sw $t1 -72($t9)
+	li $v0 5
+	syscall
+	move $t2 $v0
+	lw $t9 -4($fp)
+	sw $t2 -68($t9)
+	li $v0 5
+	syscall
+	move $t3 $v0
+	lw $t9 -4($fp)
+	sw $t3 -72($t9)
+	sw $sp 0($fp)
+	subu $sp $sp 68
+	li $t8 3
+	sw $t8 0($sp)
+	subu $sp $sp 4
+	addu $fp $fp 4
+	lw $t9 -4($fp)
+	sw $t0 -4($t9)
+	sw $s0 -8($t9)
+	sw $t1 -12($t9)
+	sw $s1 -16($t9)
+	sw $t2 -20($t9)
+	sw $s2 -24($t9)
+	sw $t3 -28($t9)
+	sw $s3 -32($t9)
+	sw $t4 -36($t9)
+	sw $s4 -40($t9)
+	sw $t5 -44($t9)
+	sw $s5 -48($t9)
+	sw $t6 -52($t9)
+	sw $s6 -56($t9)
+	sw $t7 -60($t9)
+	sw $s7 -64($t9)
+	jal hhh
+	move $t4 $v0
+	sw $sp 0($fp)
+	subu $sp $sp 68
+	sw $t4 0($sp)
+	subu $sp $sp 4
+	addu $fp $fp 4
+	lw $t9 -4($fp)
+	sw $t0 -4($t9)
+	sw $s0 -8($t9)
+	sw $t1 -12($t9)
+	sw $s1 -16($t9)
+	sw $t2 -20($t9)
+	sw $s2 -24($t9)
+	sw $t3 -28($t9)
+	sw $s3 -32($t9)
+	sw $t4 -36($t9)
+	sw $s4 -40($t9)
+	sw $t5 -44($t9)
+	sw $s5 -48($t9)
+	sw $t6 -52($t9)
+	sw $s6 -56($t9)
+	sw $t7 -60($t9)
+	sw $s7 -64($t9)
+	jal hhh
+	move $t5 $v0
+	li $t8 41440
+	subu $t6 $t8 $t5
+	addu $t7 $t6 -10091
+	move $s0 $t7
+	lw $t9 -4($fp)
+	sw $s0 -72($t9)
+	subu $sp $sp 4
+	li $s1 5
+	lw $t9 -4($fp)
+	sw $s1 -76($t9)
+	subu $sp $sp 4
+	li $s2 10
+	lw $t9 -4($fp)
+	sw $s2 -80($t9)
+jumpLabel_4:
+	lw $t9 -4($fp)
+	lw $s3 -80($t9)
+	lw $t9 -4($fp)
+	lw $s4 -76($t9)
+	lw $t9 -4($fp)
+	lw $s5 -76($t9)
+	mul $s6 $s4 $s5
+	lw $t9 -4($fp)
+	lw $s7 -76($t9)
+	mul $t0 $s6 $s7
+	lw $t9 -4($fp)
+	lw $t1 -76($t9)
+	mul $t2 $t0 $t1
+	lw $t9 -4($fp)
+	lw $t3 -76($t9)
+	mul $t4 $t2 $t3
+	lw $t9 -4($fp)
+	lw $t5 -76($t9)
+	mul $t6 $t4 $t5
+	slt $t7 $s3 $t6
+	beq $t7 0 jumpLabel_6
+	beq $t7 0 jumpLabel_6
+jumpLabel_5:
+	la $t9 d
+	lw $t0 0($t9)
+	la $t9 d
+	lw $t1 0($t9)
+	mul $t2 $t0 $t1
+li $t8 10000
+	div $t2 $t8
+	mfhi $t3
+	move $t4 $t3
+	la $t9 d
+	sw $t4 0($t9)
+	lw $t9 -4($fp)
+	lw $t5 -80($t9)
+	addu $t6 $t5 1
+	move $t7 $t6
+	lw $t9 -4($fp)
+	sw $t7 -80($t9)
+	j jumpLabel_4
+jumpLabel_6:
+	lw $t9 -4($fp)
+	lw $s0 -68($t9)
+	li $v0 1
+	move $a0 $s0
+	syscall
+	li $v0 4
+	la $a0 label_0
+	syscall
+	lw $t9 -4($fp)
+	lw $s1 -72($t9)
+	li $v0 1
+	move $a0 $s1
+	syscall
+	li $v0 4
+	la $a0 label_1
+	syscall
+	lw $t9 -4($fp)
+	lw $s2 -76($t9)
+	li $v0 1
+	move $a0 $s2
+	syscall
+	li $v0 4
+	la $a0 label_2
+	syscall
+	li $v0 10
+	syscall

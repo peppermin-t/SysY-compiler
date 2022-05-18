@@ -1,0 +1,14 @@
+void printd(int b[][4], int m) {
+    printf("%d\n", b[2][3]);
+}
+
+int main() {
+    int my[3][6] = {{98},{78}};
+    my[1][2] = 1;
+    my[2][1] = 45;
+    int a, b;
+    a = my[2][1];
+    printf("%d\n", my[1][2] + a);
+    printd(my, a);
+    return 0;
+}
