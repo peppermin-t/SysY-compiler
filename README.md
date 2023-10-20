@@ -1,7 +1,7 @@
 # MyCompiler
 
 ## Description
-This is the course project for the 2021-2022 Compiler Technology course, a Java-implemented MIPS-SysY(a subset of C language) compiler from draft, which can compile any SysY language program into fast MIPS assembly codes.\\
+This is the course project for the 2021-2022 Compiler Technology course, a Java-implemented MIPS-SysY(a subset of C language) compiler from draft, which can compile any SysY language program into fast MIPS assembly codes.\
 The compiler includes six basic parts of a compiler: lexical analysis, syntax analysis, semantic Analysis, Intermediate Code Generation, optimization, and code generation, and is able to dispose a range of exceptions.
 
 ## Compilable Grammar
