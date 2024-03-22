@@ -1,4 +1,4 @@
-# MyCompiler
+# SysY-compiler
 
 ## Description
 This is the course project for the **2021-2022 Compiler Technology** course at Beihang University, a *Java-implemented MIPS-SysY(a subset of C language) compiler* from draft, which can compile any SysY language program into fast MIPS assembly codes.\
